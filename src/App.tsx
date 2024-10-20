@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Genre } from './hooks/useGenres';
 
 function App() {
-  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null)
+  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   return (
     <Grid
       templateAreas={{
