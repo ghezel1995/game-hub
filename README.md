@@ -3,4 +3,4 @@
 This is a responsive app which built with React, TypeScript and Chakra UI.
 For API I used [rawg API](https://www.rawg.io)
 To fetching data from the server I used Axios.
-For Icons I used react-icons.
+For Icons I used react-icons. The fetching data is dynamic, meaning I used dynamic custom hooks in the code. 
