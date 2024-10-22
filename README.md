@@ -42,8 +42,7 @@ You can check out the live demo in the Vercel
 
 - Frontend:
     - [React](https://react.dev/)
-    - [TypeScript](https://www.
-    typescriptlang.org/)
+    - [TypeScript](https://www.typescriptlang.org/)
     - [Chakra UI](https://v2.chakra-ui.com/)
     - [React Icons](https://react-icons.github.io/react-icons/)
 
