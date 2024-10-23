@@ -26,7 +26,7 @@ You can check out the live demo in the Vercel
 
 - __Game Information__: Browse and discover various video games, with detailed information such as their genres, platforms, and ratings.
 
-- __Genre Filtering__: Filter games based on genre to easily find games that interest you.
+- __Filtering__: Filter games based on genre and platforms to easily find games that interest you.
 
 - __Dynamic Data Fetching__: Data is fetched dynamically using custom React hooks for better performance and reusability.
 
@@ -41,19 +41,19 @@ You can check out the live demo in the Vercel
 ## Tech Stack
 
 - Frontend:
-    - [React](https://react.dev/)
-    - [TypeScript](https://www.typescriptlang.org/)
-    - [Chakra UI](https://v2.chakra-ui.com/)
-    - [React Icons](https://react-icons.github.io/react-icons/)
+  - [React](https://react.dev/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Chakra UI](https://v2.chakra-ui.com/)
+  - [React Icons](https://react-icons.github.io/react-icons/)
 
 - API
-    - [RAWG API](https://www.rawg.io)
+  - [RAWG API](https://www.rawg.io)
 
 - HTTP Client
-    - [Axios](https://www.axios.com/) for making API requests.
+  - [Axios](https://www.axios.com/) for making API requests.
 
 - Deployment:
-    - [Vercel](https://vercel.com) for deployment.
+  - [Vercel](https://vercel.com) for deployment.
 
 ## Installation and Setup
 
@@ -63,7 +63,6 @@ To run the project locally, follow these steps:
 `
 https://github.com/ghezel1995/game-hub.git
 `
-
 2. Navigate to the project directory:
 ` cd game-hub `
 3. Install the dependencies:
@@ -83,12 +82,9 @@ https://github.com/ghezel1995/game-hub.git
 
 ```
 
- 5. Start the development server:
-
+5. Start the development server:
 ` npm start ` and ` http://localhost:3000 `
-
-or if you use vite: 
-
+or if you use vite:
 ` npm run dev ` and `http://localhost:5173`
 
 ## API Integration
@@ -97,31 +93,32 @@ GameHub interacts with the RAWG API to retrieve data about video games, includin
 
 ## Custom Hooks
 
-1. useData<T>():
+1. useData Hook:
   This generic hook is the core data-fetching function. It takes an endpoint, optional request configurations, and dependencies to dynamically fetch data from the API.
 
-  - __Parameters:__
+- __Parameters:__
 
-    - `endpoint`: API endpoint for the resource.
+  - `endpoint`: API endpoint for the resource.
 
-    - `requestConfig`: Optional Axios configuration object.
+  - `requestConfig`: Optional Axios configuration object.
 
-    - `deps`: Dependency array for `useEffect` to trigger refetching.
+  - `deps`: Dependency array for `useEffect` to trigger refetching.
 - Example Usage:
 
 ```js
-useData<Game>('/games', { params: { genres: genreId } }, [genreId]);
+    useData<Game>('/games', { params: { genres: genreId } }, [genreId]);
 ```
 
 2. __useGames():__
 
-This hook is responsible for fetching game data based on the user's query. It takes in a GameQuery object (which includes filters like genre, platform, sort order, and search text) and returns a list of games that match the criteria.
+This hook is responsible for fetching game data based on the user's query.
+It takes in a GameQuery object (which includes filters like genre, platform, sort order, and search text) and returns a list of games that match the criteria.
 
 - GameQuery includes:
-    - `genre`: Selected genre (e.g., RPG, Action).
-    - `platform`: Selected platform (e.g., PC, PlayStation).
-    - `sortOrder`: How to sort the games (e.g., by popularity or rating).
-    - `searchText`: Text entered by the user for searching games.
+  - `genre`: Selected genre (e.g., RPG, Action).
+  - `platform`: Selected platform (e.g., PC, PlayStation).
+  - `sortOrder`: How to sort the games (e.g., by popularity or relevance).
+  - `searchText`: Text entered by the user for searching games.
 
 - Example Usage:
 
@@ -132,7 +129,7 @@ This hook is responsible for fetching game data based on the user's query. It ta
         sortOrder: 'popularity',
         searchText: 'Elden Ring',
     });
-``` 
+```
 
 3. __useGenres():__
 
@@ -166,7 +163,6 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/ghezel1995/game-hub/issues) or submit a pull request.
 
-
 ## Contact
 
 Feel free to reach out with questions or feedback:
@@ -181,5 +177,4 @@ Feel free to reach out with questions or feedback:
 - Implement a "Favorites" system to allow users to save their favorite games.
 - Add more sorting and filtering options for games.
 
-
-## Enjoy exploring GameHub! 🎮
+## Enjoy exploring GameHub!🎮
